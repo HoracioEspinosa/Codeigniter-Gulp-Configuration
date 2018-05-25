@@ -1,0 +1,164 @@
+{
+	"config": {
+		"debug": true,
+		"compile": {
+			"jsUglify": true,
+			"cssMinify": true,
+			"jsSourcemaps": true,
+			"cssSourcemaps": true
+		},
+		"path": {
+			"src": "./application/resources/assets",
+			"bower_components": "./bower_components",
+			"node_modules": "./node_modules"
+		},
+		"dist": {
+			"html": {
+				"enabled": true,
+				"path": "./assets"
+			}
+		}
+	},
+	"build": {
+		"vendors": {
+			"base": {
+				"src": {
+					"mandatory": {
+						"jquery": {
+							"scripts": [
+								"{$config.path.node_modules}/jquery/dist/jquery.min.js",
+								"{$config.path.node_modules}/webfontloader/webfontloader.js"
+							]
+						},
+						"bootstrap": {
+							"styles": [
+								"{$config.path.src}/sass/framework/vendors/bootstrap/bootstrap.scss"
+							],
+							"scripts": [
+								"{$config.path.node_modules}/popper.js/dist/umd/popper.js",
+								"{$config.path.bower_components}/bootstrap/dist/js/bootstrap.js"
+							]
+						},
+						"js-cookie": {
+							"scripts": [
+								"{$config.path.bower_components}/js-cookie/src/js.cookie.js"
+							]
+						},
+						"jquery-smooth-scroll": {
+							"scripts": [
+								"{$config.path.node_modules}/jquery-smooth-scroll/jquery.smooth-scroll.js"
+							]
+						}
+					},
+					"optional": {
+						"jquery-form": {
+							"scripts": [
+								"{$config.path.bower_components}/jquery-form/dist/jquery.form.min.js"
+							]
+						},
+						"bootstrap-datepicker": {
+							"styles": [
+								"{$config.path.bower_components}/bootstrap-datepicker/dist/css/bootstrap-datepicker3.min.css"
+							],
+							"scripts": [
+								"{$config.path.bower_components}/bootstrap-datepicker/dist/js/bootstrap-datepicker.js"
+							]
+						},
+						"bootstrap-datetimepicker": {
+							"styles": [
+								"{$config.path.bower_components}/smalot-bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css"
+							],
+							"scripts": [
+								"{$config.path.bower_components}/moment/min/moment-with-locales.js",
+								"{$config.path.bower_components}/smalot-bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"
+							]
+						},
+						"bootstrap-timepicker": {
+							"styles": [
+								"{$config.path.node_modules}/bootstrap-timepicker/css/bootstrap-timepicker.min.css"
+							],
+							"scripts": [
+								"{$config.path.node_modules}/bootstrap-timepicker/js/bootstrap-timepicker.min.js",
+								"{$config.path.src}/js/framework/components/plugins/forms/bootstrap-timepicker.init.js"
+							]
+						},
+						"jquery-datatable": {
+							"styles": [
+								"{$config.path.src}/js/framework/components/plugins/jquery-datatable/jquery.dataTables.css"
+							],
+							"scripts": [
+								"{$config.path.src}/js/framework/components/plugins/jquery-datatable/jquery.dataTables.js"
+							]
+						},
+						"bootstrap-daterangepicker": {
+							"styles": [
+								"{$config.path.bower_components}/bootstrap-daterangepicker/daterangepicker.css"
+							],
+							"scripts": [
+								"{$config.path.bower_components}/bootstrap-daterangepicker/daterangepicker.js",
+								"{$config.path.src}/js/framework/components/plugins/forms/bootstrap-daterangepicker.init.js"
+							]
+						},
+						"select2": {
+							"styles": [
+								"{$config.path.bower_components}/select2/dist/css/select2.css"
+							],
+							"scripts": [
+								"{$config.path.bower_components}/select2/dist/js/select2.js"
+							]
+						},
+						"inputmask": {
+							"scripts": [
+								"{$config.path.bower_components}/inputmask/dist/jquery.inputmask.bundle.js",
+								"{$config.path.bower_components}/inputmask/dist/inputmask/inputmask.date.extensions.js",
+								"{$config.path.bower_components}/inputmask/dist/inputmask/inputmask.numeric.extensions.js",
+								"{$config.path.bower_components}/inputmask/dist/inputmask/inputmask.phone.extensions.js"
+							]
+						},
+						"jquery-validation": {
+							"scripts": [
+								"{$config.path.node_modules}/jquery-validation/dist/jquery.validate.js",
+								"{$config.path.node_modules}/jquery-validation/dist/additional-methods.js",
+								"{$config.path.src}/js/framework/components/plugins/forms/jquery-validation.init.js"
+							]
+						},
+						"animate.css": {
+							"styles": [
+								"{$config.path.node_modules}/animate.css/animate.min.css"
+							]
+						},
+						"font-awesome": {
+							"styles": [
+								"{$config.path.bower_components}/font-awesome/css/font-awesome.css"
+							],
+							"fonts": [
+								"{$config.path.bower_components}/font-awesome/fonts/**"
+							]
+						}
+					}
+				},
+				"bundle": {
+					"styles": "{$config.output}/vendors/base/vendors.bundle.css",
+					"scripts": "{$config.output}/vendors/base/vendors.bundle.js",
+					"images": "{$config.output}/vendors/base/images",
+					"fonts": "{$config.output}/vendors/base/fonts"
+				}
+			},
+			"custom": {
+                "src": {
+					"styles" : [
+						"{$config.path.src}/sass/**/*.scss"
+					],
+					"scripts": [
+						"{$config.path.src}/js/**/*.js"
+					]
+				},
+				"output": {
+					"styles": "{$config.output}/css/",
+					"scripts": "{$config.output}/js/"
+					
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,35 @@
+{
+    "name": "codeigniter-v1.0",
+    "authors": [
+        "Horacio Darinel Espinosa Barceló"
+    ],
+    "description": "",
+    "main": "",
+    "license": "MIT",
+    "homepage": "http://www.cloudfrog.com.mx",
+    "private": true,
+    "ignore": [
+      "**/.*",
+      "node_modules",
+      "bower_components",
+      "test",
+      "tests"
+    ],
+    "dependencies": {
+      "jquery": "^3.2.1",
+      "font-awesome": "^4.7.0",
+      "bootstrap-datepicker": "^1.7.1", 
+      "bootstrap-timepicker": "^0.5.2",
+      "smalot-bootstrap-datetimepicker": "^2.4.4",
+      "bootstrap-daterangepicker": "^2.1.25",
+      "select2": "^4.0.3",
+      "inputmask": "^3.3.7",
+      "gmaps": "^0.4.25",
+      "jquery-form": "^4.2.1",
+      "bootstrap": "v4.0.0-beta"
+    },
+    "resolutions": {
+      "jquery": "^3.2.1",
+      "bootstrap": "v4.0.0-beta"
+    }
+  }
